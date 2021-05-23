@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>README - Google Maps Tweet Markers</title>
+		<link rel="stylesheet" type="text/css" href="css/map_tweet.css" />
+		<script src="js/map_tweet.js"></script>
+	</head>
+
+
+	<body>
+		<header id="header">
+			<div class="page-wrapper">
+
+				<!-- MAIN NAVIGATION-->
+				<nav id="main-navigation">
+					<ul class="menu">
+						<li><a href="./index.php">Home</a></li>
+						<li><a href="./readme.php">README</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<div class="page-wrapper">
+			<main>
+				<h1>API Project README</h1>
+				
+				<p>The API project makes use of three APIs, Twitter API, Google Map Javascript API, and Geocoding API. 
+				The user searches for tweets based on keyword. And the location of users who have tweeted thoses keyword
+				is plotted on the Google Map. A description of the processes is given as follow.</p>
+				
+				<h3>Twitter API</h3>
+				<p>The user first inputs a keyword search query in the search form
+				which is pased as an input parameter to the Twitter API v2 (Search Tweets - Recent Results). 
+				This API fetches the tweets with the matching keywords. It then looks at the user object associated
+				with the tweets, and fetches the "location" property. The Postman Collection was also used as
+				part of this project.</p> 
+				
+				<p>The fetched results is stored in the <strong>tweet_result.json</strong> file.</p>
+				
+				<h3>GeoCoding API</h3>
+				<p>Based on the "location" property of the user object, the GeoCoding API then tries to retrieve the latlong 
+				values for each of the locations. Not all user objects may have this optional property, and those which may 
+				have this property would be in a form which will result in an unsuccessful geocode operation. A representative
+				example (sample) of the location values is given as follow.</p>
+				<ul>
+					<li>Scotland</li>
+					<li>🇳🇬 </li>
+					<li>Oceanside, CA</li>
+					<li>Georgia</li>
+					<li>Hampshire, England</li>
+					<li>home</li>
+					<li>Uganda, Kenya</li>
+					<li>On Top</li>
+					<li>International</li>
+					<li>Floating b/t Jupiter and Mars</li>
+					<li>South Park, Colorado</li>
+					<li>@ da trap </li>
+					<li>Oakland, CA</li>
+					<li>KINGDOM OF SAUDI ARABIA</li>
+					<li>Los Angeles, CA</li>
+					<li>Abuja, Nigeria</li>
+					<li>Lagos </li>
+					<li>United States Minor Outlying Islands</li>
+					<li>up yours</li>
+					<li>Durban, South Africa</li>
+				</ul>
+				
+				<h3>Google Map API</h3>
+				<p>After the latlong coordinats for the location has been fetched, a marker is placed for each of these locations on
+				the map.<p>
+				
+			</main>
+
+		</div>
+		
+	</body>
+	
+</html>
