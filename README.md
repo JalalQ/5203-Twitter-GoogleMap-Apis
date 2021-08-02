@@ -7,7 +7,9 @@ The API project makes use of two APIs, Twitter API, and Google Map Javascript, a
 - [x] The latlong values are then plotted on the map with a marker, using Google Map Javascript API.
 - [x] Tweets matching the search query are also listed along with the username and time of posting are also listed below the map.
 
-The Google Map API key found in the index.html is HTTP referrer restricted.
+## Code Limitation
+The source code in the repo will not run when cloned due to the following reasons. The Google Map API key found in the index.html is HTTP referrer restricted.
+The Twitter Bearer Token (in the index.php file) has been hidden. To run the code, kindly fetch your own Google Map API key and Twitter Bearer Token.
 
 ## Screenshots
 
